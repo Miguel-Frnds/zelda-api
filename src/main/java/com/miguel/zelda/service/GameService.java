@@ -60,7 +60,7 @@ public class GameService {
     }
 
     public GameResponseDTO findLatestGame(){
-        Game gameFound = gameRepository.findTopByReleasedDateIsNotNullOrderByReleasedDateDesc()
+        Game gameFound = gameRepository.findTopByOrderByReleasedDateDesc()
                 .orElseThrow(() -> new RuntimeException("No games found in the database"));
 
         return GameMapper.toResponseDTO(gameFound);
