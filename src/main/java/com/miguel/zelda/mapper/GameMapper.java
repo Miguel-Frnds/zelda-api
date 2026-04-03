@@ -16,7 +16,6 @@ public class GameMapper {
         game.setDescription(api.getDescription());
         game.setPublisher(api.getPublisher());
         game.setDeveloper(api.getDeveloper());
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy").withLocale(Locale.US);
         LocalDate date = LocalDate.parse(api.getReleasedDate().trim(), formatter);
         game.setReleasedDate(date);
