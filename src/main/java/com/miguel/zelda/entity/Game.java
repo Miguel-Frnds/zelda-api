@@ -21,9 +21,10 @@ public class Game {
     @Column(nullable = false, unique = true)
     private String id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String name;
 
+    @Column(columnDefinition = "TEXT")
     private String description;
     private String developer;
     private String publisher;
